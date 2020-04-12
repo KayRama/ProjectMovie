@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ysx-oB-KsE">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--List Movie View Controller-->
+        <scene sceneID="IGg-0H-fY5">
+            <objects>
+                <viewController id="Ysx-oB-KsE" customClass="ListMovieViewController" customModule="Project_Movie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jua-Ve-iyj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k4r-rO-bek">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="k4r-rO-bek" firstAttribute="leading" secondItem="gAS-fP-5f7" secondAttribute="leading" id="ACs-TC-PAl"/>
+                            <constraint firstItem="k4r-rO-bek" firstAttribute="top" secondItem="gAS-fP-5f7" secondAttribute="top" id="a01-xs-0xd"/>
+                            <constraint firstItem="gAS-fP-5f7" firstAttribute="bottom" secondItem="k4r-rO-bek" secondAttribute="bottom" id="bNK-Sh-5jF"/>
+                            <constraint firstItem="gAS-fP-5f7" firstAttribute="trailing" secondItem="k4r-rO-bek" secondAttribute="trailing" id="iGP-fk-cNw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gAS-fP-5f7"/>
+                    </view>
+                    <connections>
+                        <outlet property="listMovieTableView" destination="k4r-rO-bek" id="Tgy-fc-CW6"/>
+                        <segue destination="3IW-Qw-pGX" kind="show" identifier="segueToDetails" id="RQL-od-9A7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n9D-b9-8E4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="114" y="79"/>
+        </scene>
+        <!--MovieDetail-->
+        <scene sceneID="nEc-AZ-CVL">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MovieDetail" id="3IW-Qw-pGX" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="DsE-nw-cOy"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pbH-GR-QXS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789" y="80"/>
+        </scene>
+    </scenes>
+</document>
